@@ -22,12 +22,7 @@ public class Homework6 {
 
         //Создание и заполнение массива
         byte[][] array2D = new byte[4][4];
-        byte number = 1;
-        for(byte i = 0 ; i < array2D.length; i++){
-            for(byte j = 0; j < array2D[i].length; j++){
-                array2D[i][j] = number++;
-            }
-        }
+        create2DArray(array2D);
 
         //Вывод двумерного массива до перестановок
         print2DArray(array2D);
@@ -43,8 +38,17 @@ public class Homework6 {
         print2DArray(array2D);
 
     }
+
+    public static void create2DArray(byte[][]array2D){
+        byte number = 1;
+        for(byte i = 0 ; i < array2D.length; i++){
+            for(byte j = 0; j < array2D[i].length; j++){
+                array2D[i][j] = number++;
+            }
+        }
+    }
     public static void swappingBetweenDiagonalBottomLeft(byte[][] array2D){
-        for (int i = 3; i > 0; i--){
+        for (int i = array2D.length-1; i > 0; i--){
             for(int j = 0; j < array2D[i].length; j++){
                 if(i > j){
                     byte temp = array2D[j][i];
@@ -79,6 +83,7 @@ public class Homework6 {
         for(int i = 0; i < array.length; i++){
             System.out.printf("array[%d] = %d\n",i,array[i]);
         }
+        System.out.println();
     }
 
     //Метод, который заносит в массив только нечётные числа
