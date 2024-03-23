@@ -1,3 +1,5 @@
+package lesson5.hw;
+
 import java.util.Scanner;
 
 
