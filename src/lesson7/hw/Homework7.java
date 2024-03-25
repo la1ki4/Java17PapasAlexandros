@@ -91,9 +91,12 @@ public class Homework7 {
 
     // 5. Дана матрица целых чисел. Вернуть строку в матрице с наибольшей суммой элементов.
     public static int[] biggestRowInMatrix(int[][] matrix) {
+        //Создаём переменные, которые будут запоминать сумму строки, индекс с наибольшей суммой строки и наибольшую текущую сумму в строке
         int sumOfRow = 0;
         byte indexOfbiggestSumOfRow = 0;
         int biggestSumOfRow = 0;
+
+        //Бегаем по элементам матрицы, и заносим в переменные результаты с текущим наивысшем результатом
         for(byte i = 0; i < matrix.length; i++){
             for(byte j = 0; j < matrix[i].length; j++){
                 sumOfRow += matrix[i][j];
@@ -105,8 +108,10 @@ public class Homework7 {
                 sumOfRow = 0;
             }
         }
+        //Создаём выходной массив, который запоминает длинну строки с наивысшей суммой из матрицы
         int[] output = new int[matrix[indexOfbiggestSumOfRow].length];
 
+        //Переписываем значения из матрицы
         for(byte i = 0; i < output.length; i++){
             output[i] = matrix[indexOfbiggestSumOfRow][i];
         }
