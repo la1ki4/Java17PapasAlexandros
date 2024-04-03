@@ -3,6 +3,7 @@ package lesson10.hw10;
 import java.util.Scanner;
 
 public class Main {
+    //Метод, заполняющий данные человека
     public static void fillingPerson(Person somePerson){
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter person's name: ");
