@@ -1,6 +1,6 @@
 package lesson10.hw10;
 
-//Класс человека
+//Класс 'Человек'
 public class Person {
     //Поля имени, возраста, высоты
     private String name;
