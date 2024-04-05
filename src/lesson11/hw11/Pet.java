@@ -25,8 +25,7 @@ public class Pet extends Animal{
     public void jump(){
         System.out.println("Pet jumps");
     }
-    @Override
-    public String toString(){
-        return "Dogs count of paw " + this.paw;
+    public int getPaw() {
+        return paw;
     }
 }
