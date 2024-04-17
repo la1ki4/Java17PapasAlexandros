@@ -8,20 +8,6 @@ package lesson13.hw;
  */
 public class Main {
 
-    public static void printMagazines(Printable[] printableItems){
-        for(Printable printableItem : printableItems){
-            if(printableItem instanceof Magazine){
-                printableItem.print();
-            }
-        }
-    }
-    public static void printBooks(Printable[] printableItems){
-        for(Printable printableItem : printableItems){
-            if(printableItem instanceof Book){
-                printableItem.print();
-            }
-        }
-    }
     public static void main(String[] args) {
         Printable[] printableItems = new Printable[3];
         printableItems[0] = new Book("Java programming");
@@ -32,8 +18,8 @@ public class Main {
             printableItem.print();
         }
         System.out.println("\nOnly magazines:");
-        printMagazines(printableItems);
+        Magazine.printMagazines(printableItems);
         System.out.println("\nOnly books:");
-        printBooks(printableItems);
+        Book.printBooks(printableItems);
     }
 }
