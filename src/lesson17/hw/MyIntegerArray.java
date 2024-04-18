@@ -11,9 +11,6 @@ public class MyIntegerArray {
     }
 
     public int getElementAtIndex(int index) throws ArrayIndexOutOfBoundsException {
-        if(index < 0 || index >= array.length){
-            throw new ArrayIndexOutOfBoundsException("Index is out of bounds");
-        }
         return array[index];
     }
 }
