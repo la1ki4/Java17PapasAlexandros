@@ -7,12 +7,10 @@ public class Main {
     public static void main(String[] args) {
         Car car = new Car("Lamborghini", "red");
         try {
-            car.drive(1);
+            car.drive(0);
             car.safetyBelt("Not Belt");
-        } catch (NotFuelException notFuelException){
-            System.err.println(notFuelException.getMessage());
-        } catch (NotBeltException notBeltException){
-            System.err.println(notBeltException.getMessage());
+        } catch (Exception exception){
+            System.err.println(exception.getMessage());
         }
     }
 }
