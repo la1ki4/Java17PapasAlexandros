@@ -1,5 +1,14 @@
 package lesson21.hw;
 
+/*
+Создать объект класса Stack типа String. Добавить в него 5 значений. Каждое значение вывести и удалить.
+Создать объект класса LinkedList интерфейса Queue типа String. Добавить в него 5 значений. Каждое
+значение вывести и удалить без выброса исключения.
+Создать объект класса PriorityQueue интерфейса Queue типа String.
+Добавить в него 5 значений. Каждое значение По Приоритету вывести и удалить.
+ */
+
+
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
