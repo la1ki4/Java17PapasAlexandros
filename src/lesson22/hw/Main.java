@@ -14,21 +14,15 @@ import java.util.Map;
 public class Main {
 
     public static void printSet(Map<String,Toy> toyShop){
-        for(Map.Entry<String,Toy> toyEntry : toyShop.entrySet()){
-            System.out.println(toyEntry);
-        }
+        System.out.println(toyShop.entrySet());
     }
 
     public static void printToysNames(Map<String,Toy> toyShop){
-        for(String name : toyShop.keySet()){
-            System.out.println(name);
-        }
+        System.out.println(toyShop.keySet());
     }
 
     public static void printToysSpecifications(Map<String,Toy> toyShop){
-        for(Toy toy : toyShop.values()){
-            System.out.println(toy);
-        }
+        System.out.println(toyShop.values());
     }
 
     public static void main(String[] args) {
