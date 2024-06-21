@@ -13,32 +13,29 @@ package lesson31.hw;
 
 public class Main {
     public static void main(String[] args) {
-        IncrementAndDecrement number = new IncrementAndDecrement(0);
-        Thread incrementThread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                number.incrementMethod();
-            }
-        });
 
-        Thread decrementThread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                number.decrementMethod();
-            }
-        });
+        IncrementAndDecrement number = new IncrementAndDecrement();
 
-        incrementThread.start();
-        decrementThread.start();
+        Thread thread1 = new Thread(number);
+        Thread thread2 = new Thread(number);
+        Thread thread3 = new Thread(number);
+
+        thread1.start();
+        thread2.start();
+        thread3.start();
+
 
         try {
-            incrementThread.join();
-            decrementThread.join();
-        }catch (InterruptedException exception){
+            thread1.join();
+            thread2.join();
+            thread3.join();
+        } catch (InterruptedException exception){
             exception.printStackTrace();
         }
 
-        System.out.println(number.toString());
+        System.out.println(number.getValue());
+
+
 
         SquareNumbers squareNumbers = new SquareNumbers();
 

@@ -1,34 +1,31 @@
 package lesson31.hw;
 
-public class IncrementAndDecrement{
-    private volatile int number;
+public class IncrementAndDecrement implements Runnable{
+    private static int value = 0;
 
-    IncrementAndDecrement(int number){
-        this.number = number;
-    }
-
-    public void incrementMethod(){
+    public void increment(){
         synchronized (this){
             for(int i = 0; i < 5000; i++){
-                System.out.println(number);
-                number++;
+                value++;
             }
         }
     }
 
-    public void decrementMethod(){
+    public void decrement(){
         synchronized (this){
-            for(int i = 0; i < 1000; i++){
-                System.out.println(number);
-                number--;
+            for (int i = 0; i < 1000; i++){
+                value--;
             }
         }
+    }
+
+    public int getValue() {
+        return value;
     }
 
     @Override
-    public String toString() {
-        return "IncrementAndDecrement{" +
-                "number=" + number +
-                '}';
+    public void run() {
+        increment();
+        decrement();
     }
 }
