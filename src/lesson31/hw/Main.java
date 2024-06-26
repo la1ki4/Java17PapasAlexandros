@@ -16,24 +16,18 @@ public class Main {
 
         IncrementAndDecrement number = new IncrementAndDecrement();
 
-        Thread thread1 = new Thread(number);
-        Thread thread2 = new Thread(number);
-        Thread thread3 = new Thread(number);
+        Thread thread1 = new Thread(number::increment);
+        Thread thread2 = new Thread(number::decrement);
 
         thread1.start();
         thread2.start();
-        thread3.start();
 
-
-        try {
+        try{
             thread1.join();
             thread2.join();
-            thread3.join();
         } catch (InterruptedException exception){
             exception.printStackTrace();
         }
-
-        System.out.println(number.getValue());
 
 
 
